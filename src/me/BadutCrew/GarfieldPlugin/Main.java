@@ -1,14 +1,24 @@
 package me.BadutCrew.GarfieldPlugin;
 
-import org.bukkit.command.Command;
-import org.bukkit.command.CommandSender;
-import org.bukkit.entity.Player;
+import org.bukkit.Bukkit;
+import org.bukkit.ChatColor;
+import org.bukkit.Material;
+import org.bukkit.NamespacedKey;
+import org.bukkit.inventory.ItemStack;
+import org.bukkit.inventory.ShapedRecipe;
+import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.plugin.java.JavaPlugin;
 
+// import me.BadutCrew.GarfieldPlugin.recipe.Lasagne;
+
 public class Main extends JavaPlugin{
+	
     @Override
     public void onEnable() {
-
+    	// Lasagne lasagne = new Lasagne();
+    	
+    	// Bukkit.addRecipe(lasagne.getRecipe());
+    	Bukkit.addRecipe(getRecipe());
     }
 
     @Override
@@ -17,20 +27,26 @@ public class Main extends JavaPlugin{
     }
     
 
-    public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
-        if (label.equalsIgnoreCase("hello")) {
-            if (sender instanceof Player) {
-                Player player = (Player) sender;
-                player.sendMessage("hey welcome to the server!");
-                return true;
-            }
 
-            else {
-                sender.sendMessage("Hey Console!");
-            }
-        }
+	public ShapedRecipe getRecipe() {
+		
+		ItemStack item = new ItemStack(Material.PUMPKIN_PIE);
+		ItemMeta meta = item.getItemMeta();
 
-        return false;
-    }
-
+		meta.setDisplayName(ChatColor.GOLD + "Lasagne");
+		
+		item.setItemMeta(meta);
+		NamespacedKey key = new NamespacedKey(this, "Lasagne");
+		
+		ShapedRecipe recipe = new ShapedRecipe(key, item);
+		
+		recipe.shape("WMW", "EWE", "SSS");
+		
+		recipe.setIngredient('W', Material.WHEAT);
+		recipe.setIngredient('M', Material.MILK_BUCKET);
+		recipe.setIngredient('E', Material.EGG);
+		recipe.setIngredient('S', Material.COOKED_BEEF);
+		
+		return recipe;
+	}
 }
