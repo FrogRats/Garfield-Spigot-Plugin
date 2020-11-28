@@ -13,7 +13,6 @@ public class Lasagne extends JavaPlugin {
 	public ShapedRecipe getRecipe() {
 		
 		ItemStack item = new ItemStack(Material.PUMPKIN_PIE);
-		
 		NamespacedKey key = new NamespacedKey(this, "Lasagne");
 		
 		ShapedRecipe recipe = new ShapedRecipe(key, item);
