@@ -6,13 +6,13 @@ import org.bukkit.craftbukkit.v1_16_R3.CraftWorld;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerItemConsumeEvent;
-import me.BadutCrew.GarfieldPlugin.Mob.Garfield;
+import me.BadutCrew.GarfieldPlugin.mob.Garfield;
 import net.minecraft.server.v1_16_R3.WorldServer;
 
 public class EatsLasagne implements Listener{
 	@EventHandler
 	public void onConsume(PlayerItemConsumeEvent event) {
-		if(!event.getItem().getType().equals(Material.PUMPKIN_PIE))
+		if(!event.getItem().getType().equals(Material.ROTTEN_FLESH))
 			return;
 		if(!event.getItem().getItemMeta().getDisplayName().contains("Lasagne"))
 			return;
