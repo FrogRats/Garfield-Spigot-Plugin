@@ -28,7 +28,7 @@ public class Garfield extends EntityRavager{
 	@Override
     public void initPathfinder() {
     	
-    	this.targetSelector.a(0, new PathfinderGoalNearestAttackableTarget(this, EntityPlayer.class, false));
+    	this.targetSelector.a(0, new PathfinderGoalNearestAttackableTarget<EntityPlayer>(this, EntityPlayer.class, false));
     	this.goalSelector.a(1, new PathfinderGoalMeleeAttack(this, 1.0F, false));
     	
     }
