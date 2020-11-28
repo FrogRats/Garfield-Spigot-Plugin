@@ -10,15 +10,17 @@ import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
 import me.BadutCrew.GarfieldPlugin.events.EatsLasagne;
+import me.BadutCrew.GarfieldPlugin.events.JoinEvent;
 public class Main extends JavaPlugin{
 	
     @Override
     public void onEnable() {
-    	// Lasagne lasagne = new Lasagne();
-    	// Bukkit.addRecipe(lasagne.getRecipe());
+
+    	
     	Bukkit.addRecipe(getRecipe());
     	PluginManager pm = this.getServer().getPluginManager();
     	pm.registerEvents(new EatsLasagne(), this);
+    	pm.registerEvents(new JoinEvent(), this);
     }
 
     @Override
@@ -27,14 +29,13 @@ public class Main extends JavaPlugin{
     }
     
 
-
 	public ShapedRecipe getRecipe() {
 		
-		ItemStack item = new ItemStack(Material.PUMPKIN_PIE);
+		ItemStack item = new ItemStack(Material.ROTTEN_FLESH);
 		ItemMeta meta = item.getItemMeta();
 
 		meta.setDisplayName(ChatColor.GOLD + "Lasagne");
-		
+		meta.setCustomModelData(1234567);
 		item.setItemMeta(meta);
 		NamespacedKey key = new NamespacedKey(this, "Lasagne");
 		
