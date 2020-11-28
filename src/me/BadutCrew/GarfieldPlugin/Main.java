@@ -11,6 +11,7 @@ import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
 import me.BadutCrew.GarfieldPlugin.events.EatsLasagne;
 import me.BadutCrew.GarfieldPlugin.events.JoinEvent;
+import me.BadutCrew.GarfieldPlugin.mob.Bar;
 public class Main extends JavaPlugin{
 	
     @Override
@@ -21,6 +22,7 @@ public class Main extends JavaPlugin{
     	PluginManager pm = this.getServer().getPluginManager();
     	pm.registerEvents(new EatsLasagne(), this);
     	pm.registerEvents(new JoinEvent(), this);
+    	pm.registerEvents(new Bar(), this);
     }
 
     @Override
