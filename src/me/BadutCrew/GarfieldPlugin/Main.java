@@ -7,18 +7,18 @@ import org.bukkit.NamespacedKey;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.ShapedRecipe;
 import org.bukkit.inventory.meta.ItemMeta;
+import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
-
-// import me.BadutCrew.GarfieldPlugin.recipe.Lasagne;
-
+import me.BadutCrew.GarfieldPlugin.events.EatsLasagne;
 public class Main extends JavaPlugin{
 	
     @Override
     public void onEnable() {
     	// Lasagne lasagne = new Lasagne();
-    	
     	// Bukkit.addRecipe(lasagne.getRecipe());
     	Bukkit.addRecipe(getRecipe());
+    	PluginManager pm = this.getServer().getPluginManager();
+    	pm.registerEvents(new EatsLasagne(), this);
     }
 
     @Override
