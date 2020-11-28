@@ -35,6 +35,7 @@ public class Main extends JavaPlugin{
 		ItemMeta meta = item.getItemMeta();
 
 		meta.setDisplayName(ChatColor.GOLD + "Lasagne");
+		
 		meta.setCustomModelData(1234567);
 		item.setItemMeta(meta);
 		NamespacedKey key = new NamespacedKey(this, "Lasagne");

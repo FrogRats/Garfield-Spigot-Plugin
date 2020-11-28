@@ -27,6 +27,5 @@ public class Garfield extends EntityRavager{
     public void initPathfinder() {
     	
     	
-    	
     }
 }
