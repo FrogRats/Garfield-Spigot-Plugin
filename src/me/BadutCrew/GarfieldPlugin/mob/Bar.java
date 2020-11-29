@@ -4,8 +4,8 @@ import java.util.Random;
 
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
+import org.bukkit.Sound;
 import org.bukkit.boss.BarColor;
-import org.bukkit.boss.BarFlag;
 import org.bukkit.boss.BarStyle;
 import org.bukkit.boss.BossBar;
 import org.bukkit.entity.Ravager;
@@ -40,12 +40,13 @@ public class Bar implements Listener {
 		if(!event.getItem().getItemMeta().getDisplayName().contains("Lasagne"))
 			return;
 		
-        bossbar = Bukkit.createBossBar(format("&c&lGarfield the &kAlmighty"), BarColor.RED, BarStyle.SEGMENTED_10, BarFlag.CREATE_FOG);
+        bossbar = Bukkit.createBossBar(format("&c&lGarfield the &kAlmighty"), BarColor.RED, BarStyle.SEGMENTED_12);
         // Reset Health Value
         Health = 1;
         bossbar.setProgress(Health);
         bossbar.addPlayer(event.getPlayer());
         bossbar.setVisible(true);
+        
 	}
 	
 	@EventHandler
