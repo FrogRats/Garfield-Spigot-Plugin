@@ -8,6 +8,7 @@ import org.bukkit.Sound;
 import org.bukkit.boss.BarColor;
 import org.bukkit.boss.BarStyle;
 import org.bukkit.boss.BossBar;
+import org.bukkit.entity.Player;
 import org.bukkit.entity.Ravager;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -41,6 +42,8 @@ public class Bar implements Listener {
 			return;
 		
         bossbar = Bukkit.createBossBar(format("&c&lGarfield the &kAlmighty"), BarColor.RED, BarStyle.SEGMENTED_12);
+        Player player = (Player) (event.getPlayer());
+		player.playSound(player.getLocation(), Sound.MUSIC_DISC_11, 1f, 1f);
         // Reset Health Value
         Health = 1;
         bossbar.setProgress(Health);

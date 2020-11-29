@@ -2,7 +2,9 @@ package me.BadutCrew.GarfieldPlugin.events;
 
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
+import org.bukkit.Sound;
 import org.bukkit.craftbukkit.v1_16_R3.CraftWorld;
+import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerItemConsumeEvent;
@@ -20,6 +22,9 @@ public class EatsLasagne implements Listener{
 		Garfield gar = new Garfield(event.getPlayer().getLocation());
 		WorldServer world = ((CraftWorld) event.getPlayer().getWorld()).getHandle();
 		world.addEntity(gar);
+		
+		Player player = (Player) (event.getPlayer());
+		player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_DESTROY, 1f, 1f);
 		Bukkit.broadcastMessage(format("&6You &l&4DARE &r&6summon me &l&4JON?!?"));
 	}
 	

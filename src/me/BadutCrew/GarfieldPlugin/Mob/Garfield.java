@@ -26,7 +26,6 @@ public class Garfield extends EntityRavager{
         this.setCustomNameVisible(true);
     }
     
-    @SuppressWarnings("unchecked")
 	@Override
     public void initPathfinder() {
     	
