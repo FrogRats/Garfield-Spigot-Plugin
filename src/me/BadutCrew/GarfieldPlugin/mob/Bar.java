@@ -1,5 +1,6 @@
 package me.BadutCrew.GarfieldPlugin.mob;
 
+import org.bukkit.Bukkit;
 import org.bukkit.Material;
 import org.bukkit.boss.BarColor;
 import org.bukkit.boss.BarStyle;
@@ -17,14 +18,16 @@ public class Bar implements Listener {
 	public BossBar bossbar;
 	
 	@EventHandler
-	public class Bar implements Listener {
+	public void onConsume(PlayerItemConsumeEvent event) {
+		if(!event.getItem().getType().equals(Material.ROTTEN_FLESH))
+			return;
 		if(!event.getItem().getItemMeta().getDisplayName().contains("Lasagne"))
 			return;
 		
-        BossBar bossbar = Bukkit.createBossBar("Welcome!", BarColor.PINK, BarStyle.SOLID);
         bossbar = Bukkit.createBossBar("Welcome!", BarColor.PINK, BarStyle.SOLID);
-        bossbar.setProgress(1);
-        
+        // Reset Health Value
+        Health = 1;
+        bossbar.setProgress(Health);
         bossbar.addPlayer(event.getPlayer());
         bossbar.setVisible(true);
 	}
