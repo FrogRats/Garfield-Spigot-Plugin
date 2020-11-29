@@ -9,11 +9,11 @@ Over the summer break we got really invested in a particular minecraft build of 
 
 ### What it does
 The plugin incorporates a new recipe into the game. A lasagne recipe to be precise, which users can make using the following crafting pattern (seen below). Once created and consumed the lasagne seems to have an unfortunate curse tied to it ... 
-<p align = "center"><img src = "https://github.com/Hannah-Ashna/Garfield-Spigot-Plugin/blob/main/Screenshots/Image4.png" width = "90%"></p>
+<p align = "center"><img src = "https://github.com/Hannah-Ashna/Garfield-Spigot-Plugin/blob/main/Screenshots/Image4.png" width = "60%"></p>
 
 ### How we built it
 We built it primarily using Spigot-API and Java. In addition to that we also needed to dabble a little in modifying .json files and metadata to get our assets integrated into the game via our plugin. Several hours were spent debugging during the hackathon.
-<p align = "center"><img src = "https://github.com/Hannah-Ashna/Garfield-Spigot-Plugin/blob/main/Screenshots/Image5.PNG" width = "90%"></p>
+<p align = "center"><img src = "https://github.com/Hannah-Ashna/Garfield-Spigot-Plugin/blob/main/Screenshots/Image5.PNG" width = "60%"></p>
 
 ### Challenges we ran into
 A big challenge we had was trying to get our assets to work with our plugin. There were a surpsing amount of hurdles but we managed to find a good solution to the issue within the 24 hours ... (though hopefully temporary as we continue to work on this project post-event). 
