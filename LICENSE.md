@@ -1,6 +1,6 @@
 MIT License
 
-Copyright (c) 2020 Hannah Ashna Jacob
+Copyright (c) 2020 Hannah Ashna Jacob, Jarad Johnson Bailey, Hassaan Naveed and Nicholas McCaig
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
