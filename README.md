@@ -33,3 +33,4 @@ A wild garfield in its natural habitat ... definitely not a reskinned ravager ..
 <p align = "center"><img src = "https://github.com/Hannah-Ashna/Garfield-Spigot-Plugin/blob/main/Screenshots/Image1.png" width = "90%"></p>
 <p align = "center"><img src = "https://github.com/Hannah-Ashna/Garfield-Spigot-Plugin/blob/main/Screenshots/Image2.png" width = "90%"></p>
 <p align = "center"><img src = "https://github.com/Hannah-Ashna/Garfield-Spigot-Plugin/blob/main/Screenshots/Image3.png" width = "90%"></p>
+<p align = "center"><img src = "https://github.com/Hannah-Ashna/Garfield-Spigot-Plugin/blob/main/Screenshots/Image6.png" width = "90%"></p>
